@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 import { setProfileData } from '../../actions/profile';
+import { setError } from '../../actions/ui';
 import { getApiAccount } from '../../api/search';
 import { BaseLoading } from '../../components/BaseLoading';
 import { ArtisansBlock } from './ArtisansBlock';
@@ -37,9 +38,9 @@ export const ProfileView = () => {
 					errObj.data = error.response.data;
 					errObj.status = error.response.status;
 				}
-
 				setLoading(false);
-				history.push('/error', errObj);
+				dispatch(setError(errObj));
+				// history.push('/error', errObj);
 			}
 		};
 
@@ -49,7 +50,7 @@ export const ProfileView = () => {
 	const { profileData } = useSelector((state) => state.profile);
 
 	if (error) {
-		history.push('/error', error);
+		history.push('/error');
 	}
 
 	if (loading) {

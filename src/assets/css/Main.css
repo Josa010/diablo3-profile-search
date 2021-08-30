@@ -39,6 +39,19 @@
 	height: 106px;
 }
 
+/* LoadLayout */
+.loading-layout {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* MainLayout */
+.container {
+	min-height: 100vh;
+}
+
 .hero-barbarian.male {
 	background-position: 0 0;
 }

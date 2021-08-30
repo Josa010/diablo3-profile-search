@@ -14,7 +14,8 @@ export const HomeTitle = () => {
 						title='Format: YourProfile#1234'
 						rel='noreferrer'
 					>
-						battle-tag
+						{' '}
+						battle-tag{' '}
 					</a>
 				</em>
 				and select your region to see your profile!

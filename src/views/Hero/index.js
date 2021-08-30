@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
+import { setError } from '../../actions/ui';
 import { getApiDetailedHeroItems, getApiHero } from '../../api/search';
 import { BaseLoading } from '../../components/BaseLoading';
 import { HeroAttributes } from './HeroAttributes';
@@ -18,6 +19,7 @@ export const HeroView = () => {
 	const [items, setItems] = useState();
 
 	const history = useHistory();
+	const dispatch = useDispatch();
 
 	useEffect(() => {
 		const getHeroData = async () => {
@@ -43,7 +45,8 @@ export const HeroView = () => {
 				}
 				// setApiErr(errObj);
 				setIsLoadingHero(false);
-				history.push('/error', errObj);
+				dispatch(setError(errObj));
+				history.push('/error');
 			}
 		};
 
@@ -69,7 +72,7 @@ export const HeroView = () => {
 			getHeroData();
 			getItemsData();
 		}
-	}, [region, account, heroId, accessToken, history]);
+	}, [region, account, heroId, accessToken, history, dispatch]);
 
 	const detailHeader = () => {
 		// Asignamos valores a través de

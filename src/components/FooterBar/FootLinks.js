@@ -13,7 +13,7 @@ export const FootLinks = () => {
 				</Nav.Item>
 				<Nav.Item>
 					<Nav.Link
-						href='https://github.com/baumannzone/diablo3-vue-platz'
+						href='https://github.com/Josa010/diablo3-profile-search'
 						target='_blank'
 					>
 						Github
