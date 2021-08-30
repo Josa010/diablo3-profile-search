@@ -1,0 +1,185 @@
+/* Spinner */
+.spinner-wrapper .spinner {
+	width: 4rem;
+	height: 4rem;
+}
+
+/* App */
+#app {
+	padding: 60px 0;
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #ffffff;
+	background-color: #15202b;
+}
+
+/* grid */
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.grid-item.item-left,
+.grid-item.item-right {
+	grid-column: span 1;
+}
+
+@media (min-width: 992px) {
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+	}
+	.grid-item.item-left {
+		grid-column: span 4;
+	}
+	.grid-item.item-right {
+		grid-column: span 2;
+	}
+}
+
+/* TopHero */
+.hero-portrait-wrapper .title-name {
+	color: white;
+	font-weight: 900;
+}
+.hero-portrait-wrapper .level-circle {
+	width: 26px;
+	height: 26px;
+	padding: 4px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 13px;
+	background-color: #15202b;
+	box-shadow: 0 0 0 2px #6c757d;
+}
+
+/* HeroIco */
+.hero-ico {
+	vertical-align: middle;
+}
+
+.hero-ico .hero-image {
+	width: 30px;
+	height: 26px;
+	display: inline-block;
+	background-size: 210%;
+}
+.hero-ico .hero-name {
+	height: 24px;
+	display: inline-block;
+}
+
+/* ProgressList */
+.progression-bosses .boss-img {
+	display: block;
+}
+.progression-bosses .act {
+	margin: 0 auto;
+	width: 50px;
+	height: 55px;
+}
+
+/* Single Stat */
+
+.single-stat .ico-cont {
+	width: 80px;
+}
+
+/* Time Played hero */
+.progress-time-played h5.title {
+	color: #000;
+}
+.progress-time-played .w-50p {
+	position: relative;
+	width: 50px;
+	bottom: -2px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.progress-time-played .hero-bg-color-barbarian .progress-bar {
+	background-color: #4e1c16;
+}
+.progress-time-played .hero-bg-color-crusader .progress-bar {
+	background-color: #795548;
+}
+.progress-time-played .hero-bg-color-demon-hunter .progress-bar {
+	background-color: #f44336;
+}
+.progress-time-played .hero-bg-color-monk .progress-bar {
+	background-color: #ff9800;
+}
+.progress-time-played .hero-bg-color-necromancer .progress-bar {
+	background-color: #00bcd4;
+}
+.progress-time-played .hero-bg-color-witch-doctor .progress-bar {
+	background-color: #8bc34a;
+}
+.progress-time-played .hero-bg-color-wizard .progress-bar {
+	background-color: #3f51b5;
+}
+
+/* ArtisanItem */
+.artisan-item .icon {
+	width: 80px;
+	height: 80px;
+	background-color: #404850;
+}
+
+/* HeroDetailHeader */
+.hero-detail-header .hero-detail-avatar {
+	width: 138px;
+	height: 105px;
+	background-size: 280px;
+}
+.text-bone {
+	color: #e8dcc2;
+}
+
+/* HeroAttributeList */
+ul li .name-text {
+	color: #efb45d;
+	font-weight: 600;
+}
+
+/* HeroResources */
+.resource .name-text {
+	color: #efb45d;
+}
+.resource .resource-name-demon-hunter {
+	width: auto;
+}
+@media (min-width: 992px) {
+	.resource .resource-name-demon-hunter {
+		width: 100px;
+	}
+}
+
+/* ItemDetail */
+.d3-icon-item {
+	min-height: 100px;
+	/* // El borde de la caja va determinar la rareza del objeto, segun el color que tenga */
+	border-top-style: solid;
+	border-top-width: 4px;
+}
+
+.d3-icon-item.item-none {
+	border-color: transparent;
+}
+.d3-icon-item.item-green {
+	border-color: #8bc34a;
+}
+.d3-icon-item.item-orange {
+	border-color: #ff9800;
+}
+.d3-icon-item.item-yellow {
+	border-color: #ffeb3b;
+}
+.d3-icon-item.item-blue {
+	border-color: #03a9f4;
+}
+.d3-icon-item.item-white {
+	border-color: #a0aab5;
+}
